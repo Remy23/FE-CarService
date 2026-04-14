@@ -1,9 +1,28 @@
-# FE-CarService
-Capa FE generada con Angular, nodeJs, Css, Html, TypeScript para ejecutarse en Cloud en arquitectura de microservicios
+# App CarService
+**Capa FrontEnd:** Generado con Angular, nodeJs, Css, Html, TypeScript para ejecutarse en Cloud en arquitectura de microservicios mediante docker para generar la imagen y la administracion con kubernetes. <br/>
+**Capa BackEnd:** Java, SpringBoot, Java 21, Arquitectura de aplicación MVC, Hibernate JPA <br/>
+**Base de Datos:** PostgreSQL <br/>
+
+<br/>
 
 ***Generado con Drawio***
 
 ![Diagrama de comunicacion microservicios-Car-Service.png](src%2FDiagrama%20de%20comunicacion%20microservicios-Car-Service.png)
+
+<br/><br/><br/>
+
+***Link de la aplicación:*** https://car-frontend-cloud-remigio-dev.apps.rm3.7wse.p1.openshiftapps.com/dashboard
+
+***1. Vista principal***
+![Vista principal.png](src%2FVista%20principal.png)
+
+***2. Registro***
+![Registro de citas.png](src%2FRegistro%20de%20citas.png)
+
+
+***3. Dashboard***
+![Dashboard.png](src%2FDashboard.png)
+
 
 # CitasServicioApp
 
