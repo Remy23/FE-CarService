@@ -1,6 +1,6 @@
 # App CarService
 **Capa FrontEnd:** Generado con Angular, nodeJs, Css, Html, TypeScript para ejecutarse en Cloud en arquitectura de microservicios mediante docker para generar la imagen y la administracion con kubernetes. <br/>
-**Capa BackEnd:** Java, SpringBoot, Java 21, Arquitectura de aplicación MVC, Hibernate JPA <br/>
+**Capa BackEnd:** Java, SpringBoot, Java 21, Arquitectura de aplicación MVC, Hibernate JPA (La capa BackEnd se encuentra en otro repositorio) <br/>
 **Base de Datos:** PostgreSQL <br/>
 
 <br/>
