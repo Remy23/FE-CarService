@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #334155;
+        }
+
+        .advisor-header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid #4361ee;
+        }
+
+        .status-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 5px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .status-card.active { border-left-color: #4361ee; background: #f8faff; }
+        .status-card.warning { border-left-color: #f59e0b; }
+        .status-card.success { border-left-color: #10b981; }
+
+        .task-list {
+            background: white;
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .task-item {
+            padding: 1.25rem;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+
+        .task-item:hover { background: #f8fafc; }
+
+        .vehicle-tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .btn-status-update {
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 8px 16px;
+        }
+
+        .avatar-circle {
+            width: 45px;
+            height: 45px;
+            background: #4361ee;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }

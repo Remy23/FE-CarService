@@ -1,0 +1,98 @@
+<div class="form-container fade-in">
+    <h2 class="form-title"><i class="bi bi-person-badge text-primary me-2"></i>Nueva Cita de Servicio</h2>
+    
+    <form id="registroForm" class="row g-3">
+        <div class="col-12"><span class="section-label">Información de Contacto</span></div>
+        
+        <div class="col-md-5">
+            <label class="form-label">Nombre Completo</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <!--<input type="text" class="form-control" name="name" id="name" placeholder="Ej. Juan Pérez" required>-->
+                <input type="text" class="form-control" name="name" [(ngModel)]="modeloRegistro.name">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Teléfono</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-whatsapp"></i></span>
+                <!--<input type="tel" class="form-control" name="cliente_tel" placeholder="811..." required>-->
+                <input type="tel" class="form-control" name="phone" [(ngModel)]="modeloRegistro.phone">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Correo Electrónico</label>
+            <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                <!--<input type="email" class="form-control" name="cliente_email" placeholder="correo@ejemplo.com">-->
+                <input type="email" class="form-control" name="email" [(ngModel)]="modeloRegistro.email">
+            </div>
+        </div>
+
+        <div class="col-12 mt-3"><span class="section-label">Detalles del Vehículo</span></div>
+        
+        <div class="col-md-2">
+            <label class="form-label">Año</label>
+            <!--<input type="number" class="form-control" name="anio" placeholder="2024" required>-->
+            <input type="number" class="form-control" name="year" [(ngModel)]="modeloRegistro.year">
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">Marca</label>
+            <!--<input type="text" class="form-control" name="marca" placeholder="Ej. Toyota" required>-->
+            <input type="text" class="form-control" name="brand" [(ngModel)]="modeloRegistro.brand">
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">Modelo</label>
+            <!--<input type="text" class="form-control" name="modelo" placeholder="Ej. Corolla" required>-->
+            <input type="text" class="form-control" name="model" [(ngModel)]="modeloRegistro.model">
+        </div>
+
+        <div class="col-12 mt-3"><span class="section-label">Cita y Asignación</span></div>
+        
+        <div class="col-md-4">
+            <label class="form-label">Fecha</label>
+            <!--<input type="date" class="form-control" name="fecha_cita" required>-->
+            <input type="date" class="form-control" name="date" [(ngModel)]="modeloRegistro.date">
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Hora</label>
+            <select class="form-select" name="hour" [(ngModel)]="modeloRegistro.hour" required>
+                <option value="-1" selected>Seleccione...</option>
+                <option value="9">09:00 AM</option>
+                <option value="10">10:00 AM</option>
+                <option value="11">11:00 AM</option>
+                <option value="12">12:00 PM</option>
+                <option value="13">01:00 PM</option>
+                <option value="14">02:00 PM</option>
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">Asesor Responsable</label>
+            <select class="form-select" name="adviser" [(ngModel)]="modeloRegistro.adviser">
+                <option value="-1" selected>Seleccione...</option>
+                <!--<option value="1">Ernan (Mecánica)</option>
+                <option value="2">Sofia (Servicio al Cliente)</option>
+                <option value="3">Alan (Mecánica)</option>-->
+                <option *ngFor="let aser of listaAsesores" [value]="aser.id">
+                    {{ aser.name }}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-12">
+            <textarea class="form-control" name="description" [(ngModel)]="modeloRegistro.description" rows="2" placeholder="Notas adicionales (kilometraje, fallas reportadas...)"></textarea>
+        </div>
+
+        <div class="col-12 d-flex justify-content-between align-items-center mt-3">
+            <button type="button" class="btn btn-link text-decoration-none text-muted p-0" onclick="this.form.reset()">
+                <i class="bi bi-trash"></i> Limpiar
+            </button>
+            <!--<button type="submit" class="btn btn-primary btn-submit">
+                Confirmar Cita <i class="bi bi-check2-all ms-1"></i>
+            </button>-->
+            <button (click)="confirmarCita()" class="btn btn-primary">
+                Confirmar Cita
+            </button>
+        </div>
+    </form>
+</div>

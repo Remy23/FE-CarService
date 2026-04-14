@@ -1,0 +1,100 @@
+<div class="hub-container" style="padding: 40px 0; margin: 0 auto; overflow: visible;">
+    <header class="mb-5 fade-up">
+        <h1 class="fw-bold text-dark">Auto Servicio Remigio</h1>
+        <p class="text-muted">Panel de Control Centralizado.</p>
+    </header>
+
+  <div class="row g-4 fade-up">
+      <div class="col-md-4">
+          <!--<a routerLink="/registro" class="access-card card-registro">
+              <div class="icon-circle"><i class="bi bi-calendar-plus"></i></div>
+              <div class="card-title">Agendar Cita</div>
+              <small class="text-muted mt-2">Acceso Libre Recepción</small>
+          </a>-->
+
+          <a [routerLink]="['/registro']" class="access-card card-registro">
+            <div class="icon-circle"><i class="bi bi-calendar-plus"></i></div>
+              <div class="card-title">Agendar Cita</div>
+              <small class="text-muted mt-2">Acceso Libre Recepción</small>
+        </a>
+
+        <br/>
+      </div>
+
+      <div class="col-md-4">
+          <!--<div class="access-card card-dashboard" data-bs-toggle="modal" data-bs-target="#loginDashboardModal">
+              <div class="icon-circle"><i class="bi bi-graph-up-arrow"></i></div>
+              <div class="card-title">Concentrado</div>
+              <small class="text-muted mt-2">Métricas Administrativas</small>
+          </div>-->
+
+          <a [routerLink]="['/dashboard']" class="access-card card-dashboard">
+            <div class="icon-circle"><i class="bi bi-calendar-plus"></i></div>
+              <div class="card-title">Concentrado</div>
+              <small class="text-muted mt-2">Métricas Administrativas</small>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+          <div class="access-card card-asesor" data-bs-toggle="modal" data-bs-target="#loginAsesorModal">
+              <div class="icon-circle"><i class="bi bi-person-lock"></i></div>
+              <div class="card-title">Panel Asesor</div>
+              <small class="text-muted mt-2">Área Operativa Taller</small>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="loginDashboardModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
+      <div class="modal-content">
+          <div class="text-center">
+              <div class="login-icon-box" style="background: #fef3c7; color: #d97706;">
+                  <i class="bi bi-person-badge"></i>
+              </div>
+              <h4 class="fw-bold">Administrador</h4>
+              <p class="text-muted small">Requiere credenciales de Gerencia</p>
+          </div>
+          <form onsubmit="handleLogin(event, 'dashboard.html', this)">
+              <div class="mb-3">
+                  <label class="form-label small fw-bold">Usuario</label>
+                  <input type="text" class="form-control form-control-login" placeholder="admin.name" required>
+              </div>
+              <div class="mb-4">
+                  <label class="form-label small fw-bold">Contraseña</label>
+                  <input type="password" class="form-control form-control-login" placeholder="••••••••" required>
+              </div>
+              <button type="submit" class="btn btn-warning w-100 py-2 fw-bold rounded-3 text-white">
+                  Ingresar
+              </button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="loginAsesorModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 380px;">
+      <div class="modal-content">
+          <div class="text-center">
+              <div class="login-icon-box" style="background: #dcfce7; color: #16a34a;">
+                  <i class="bi bi-shield-lock"></i>
+              </div>
+              <h4 class="fw-bold">Asesor</h4>
+              <p class="text-muted small">Ingrese su clave de asesor</p>
+          </div>
+          <form onsubmit="handleLogin(event, 'asesor.html', this)">
+              <div class="mb-3">
+                  <label class="form-label small fw-bold">ID Empleado</label>
+                  <input type="text" class="form-control form-control-login" placeholder="asesor.01" required>
+              </div>
+              <div class="mb-4">
+                  <label class="form-label small fw-bold">Contraseña</label>
+                  <input type="password" class="form-control form-control-login" placeholder="••••" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100 py-2 fw-bold rounded-3">
+                  Ingresar
+              </button>
+          </form>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,111 @@
+<header class="advisor-header">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-3">
+            <div class="avatar-circle">RP</div>
+            <div>
+                <h4 class="mb-0 fw-bold">Panel de Hernan Gonzalez</h4>
+                <small class="text-info"><i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i> Especialista Mecánico - En línea</small>
+            </div>
+        </div>
+        <!--<div class="text-end">
+            <div class="h5 mb-0" id="current-time">09:41 AM</div>
+            <small class="opacity-75">Viernes, 27 de Feb</small>
+        </div>-->
+        <div class="text-end">
+            <div class="h5 mb-0">{{ currentTime }}</div> <small class="opacity-75">Viernes, 27 de Feb</small>
+        </div>
+    </div>
+</header>
+
+<div class="container mb-5">
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="status-card active">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <small class="text-muted d-block uppercase fw-bold" style="font-size: 0.7rem;">POR INICIAR</small>
+                        <h2 class="fw-bold mb-0">3</h2>
+                    </div>
+                    <i class="bi bi-play-circle text-primary fs-1"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="status-card warning">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <small class="text-muted d-block uppercase fw-bold" style="font-size: 0.7rem;">EN REPARACIÓN</small>
+                        <h2 class="fw-bold mb-0">2</h2>
+                    </div>
+                    <i class="bi bi-tools text-warning fs-1"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="status-card success">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <small class="text-muted d-block uppercase fw-bold" style="font-size: 0.7rem;">LISTOS HOY</small>
+                        <h2 class="fw-bold mb-0">6</h2>
+                    </div>
+                    <i class="bi bi-check-all text-success fs-1"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-list shadow-sm">
+        <div class="p-3 bg-light border-bottom d-flex justify-content-between align-items-center">
+            <h6 class="mb-0 fw-bold">Mi Agenda del Día</h6>
+            <span class="badge bg-primary rounded-pill">5 Citas</span>
+        </div>
+
+        <div class="task-item">
+            <div class="d-flex align-items-center gap-3">
+                <div class="text-center border-end pe-3">
+                    <div class="fw-bold mb-0">09:00</div>
+                    <small class="text-muted">AM</small>
+                </div>
+                <div>
+                    <div class="fw-bold">Juan Pérez <span class="vehicle-tag ms-2">Toyota Corolla - HGT-221</span></div>
+                    <small class="text-muted"><i class="bi bi-chat-left-text me-1"></i> Ruido en suspensión delantera</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary btn-status-update">Iniciar Diagnóstico</button>
+                <button class="btn btn-light btn-action"><i class="bi bi-three-dots-vertical"></i></button>
+            </div>
+        </div>
+
+        <div class="task-item">
+            <div class="d-flex align-items-center gap-3">
+                <div class="text-center border-end pe-3">
+                    <div class="fw-bold mb-0">11:30</div>
+                    <small class="text-muted">AM</small>
+                </div>
+                <div>
+                    <div class="fw-bold">Carlos Sosa <span class="vehicle-tag ms-2">Ford F-150 - LOP-992</span></div>
+                    <small class="text-muted"><i class="bi bi-info-circle me-1"></i> Cambio de aceite y filtros (Mantenimiento 10k)</small>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <span class="badge bg-warning text-dark d-flex align-items-center px-3">En Proceso...</span>
+                <button class="btn btn-success btn-status-update">Finalizar</button>
+            </div>
+        </div>
+
+        <div class="task-item opacity-50">
+            <div class="d-flex align-items-center gap-3">
+                <div class="text-center border-end pe-3">
+                    <div class="fw-bold mb-0">08:00</div>
+                    <small class="text-muted">AM</small>
+                </div>
+                <div>
+                    <div class="fw-bold text-decoration-line-through">Elena Marín <span class="vehicle-tag ms-2">Kia Rio - JKK-112</span></div>
+                    <small class="text-success fw-bold"><i class="bi bi-check-circle-fill"></i> Vehículo Entregado</small>
+                </div>
+            </div>
+            <button class="btn btn-light disabled">Completado</button>
+        </div>
+    </div>
+</div>
