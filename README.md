@@ -11,7 +11,7 @@
 
 <br/><br/><br/>
 
-***Link de la aplicación:*** https://car-frontend-cloud-remigio-dev.apps.rm3.7wse.p1.openshiftapps.com/dashboard
+***Link de la aplicación:*** https://car-frontend-cloud-remigio-dev.apps.rm3.7wse.p1.openshiftapps.com/
 
 ***1. Vista principal***
 ![Vista principal.png](src%2FVista%20principal.png)
